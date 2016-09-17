@@ -1,0 +1,31 @@
+/* Webiste Building 101 part 2 CSS */
+/* normalize.css is a style sheet that makes your css look the same across browsers */
+/* embedded and inline styles are bad practises because it's more convenient if you want to reuse the styles again */
+body {
+	font-family: helvetica, Arial, sans-serif;
+}
+
+.mid {
+	text-align: center;
+	align: center;
+	width: 100%;
+}
+
+img {
+	border: 5px solid #99ff99;
+}
+
+ul {
+	list-style-type: circle;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:visited {
+	color: green;
+}
+
