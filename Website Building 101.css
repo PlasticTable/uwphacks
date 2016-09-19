@@ -29,3 +29,9 @@ a:visited {
 	color: green;
 }
 
+@media only screen and (max-width: 381px) {
+	body {
+		background-color: #99ff99;
+	}
+}
+
