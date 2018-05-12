@@ -1,0 +1,168 @@
+Command Line
+Windows is weird
+
+Don't type in commmands in your computer that you don't know.
+Mac&Linux commands/Windows commands
+man/HELP - Help me! I'm lost!
+pwd/cd , - present working directory (NOTE THAT YOU NEED A SPACE AND COMMA AFTER CMD FOR WIN) - to know where you are
+ls/dir - list files in pwd - navigate to files
+mkdir - make directory
+cd - change directory
+cd .. - return to previous directory
+
+
+Git is a technology (software). It's local. You can access it via command line.
+It's used for version control (better than renaming files to version control).
+
+Git commands:
+git config --global user.name "Name Here" (enter name)
+git config --global user.email "email@address.ca" (enter email)
+git config --list (to see the information you typed in)
+
+can use cd and mkdir to move directory and make one
+git init is to initialize an empty git repository
+
+git remote -v connecting from wires. Wires as in connect remote respocitory to a local one. It connects Git to GitHub.
+git remote add origin  origin "url from github"   adds another remote and link it to github. Origin can be anything. URL FROM GITHUB IS THE LINK AFTER YOU CREATED WITHOUT CREATING A README FILE
+
+To add a file in your git repository
+touch "filename"  
+git add "filename"  -- to commit the added file into the repository
+
+for windows, go to cmd and go the your desired directory. Once there, type echo. > "filename.text" to create a file (can be any extension)
+
+git status shows files committed to the respository
+git diff
+
+
+git commit -m"Message" a photo of your current working directory
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git add "foo.txt"
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git commit -m"Message"    SHOULD BE FIRST COMMIT OOPS
+[master (root-commit) 8c9411d] Message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 foo.txt
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git commit -m"first commit"
+On branch master
+Untracked files:
+        uwphacks
+
+nothing added to commit but untracked files present
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git log
+commit 8c9411da7c3f565fa75cf403c1c40d19df747438
+Author: Diana Tsai <d2tsai@uwaterloo.ca>
+Date:   Sat Sep 17 12:52:08 2016 -0400
+
+    Message
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git push origin master GETS PROMPTED BY USERNAME AND PASSWORD (MAKE SURE YOU ARE ALSO LOGGED IN)
+
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks
+$ git init
+Initialized empty Git repository in C:/Users/Diana/Desktop/uwphacks/.git/
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git remote -v
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git remote add origin "https://github.com/PlasticTable/uwphacks.git"
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git remote -v
+origin  https://github.com/PlasticTable/uwphacks.git (fetch)
+origin  https://github.com/PlasticTable/uwphacks.git (push)
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ touch uwphacks
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ touch foo
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        foo.txt
+        uwphacks
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git diff
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git add "filename"
+fatal: pathspec 'filename' did not match any files
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git add "foo.txt"
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git commit -m"Message"
+[master (root-commit) 8c9411d] Message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 foo.txt
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git commit -m"first commit"
+On branch master
+Untracked files:
+        uwphacks
+
+nothing added to commit but untracked files present
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git log
+commit 8c9411da7c3f565fa75cf403c1c40d19df747438
+Author: Diana Tsai <d2tsai@uwaterloo.ca>
+Date:   Sat Sep 17 12:52:08 2016 -0400
+
+    Message
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git push origin master^C
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': PlasticTable
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/PlasticTable/uwphacks.git/'
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': PlasticTable
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/PlasticTable/uwphacks.git/'
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': PlasticTable
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 213 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/PlasticTable/uwphacks.git
+ * [new branch]      master -> master
+
+Diana@Diana-PC MINGW64 ~/Desktop/uwphacks (master)
+$
+
+git clone github_repository_url (including https://) allows you to clone a repository and bring it local
+you can open the content of a file eg index.html by typing vim index.html
+to quit, you type :q and press enter

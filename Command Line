@@ -1,0 +1,15 @@
+Command Line
+Windows is weird
+
+Don't type in commmands in your computer that you don't know.
+Mac&Linux commands/Windows commands
+man/HELP - Help me! I'm lost!
+pwd/cd , - present working directory (NOTE THAT YOU NEED A SPACE AND COMMA AFTER CMD FOR WIN) - to know where you are
+ls/dir - list files in pwd - navigate to files
+mkdir - make directory
+cd - change directory
+cd .. - return to previous directory
+
+
+Git is a technology (software). It's local. You can access it via command line.
+It's used for version control (better than renaming files to version control).
